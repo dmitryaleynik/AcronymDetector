@@ -11,12 +11,14 @@
 
 .main-container {
     margin-top: 20px;
-    display: grid;
-    grid-column-gap: 50px;
+}
+
+textarea {
+    width: 40%;
+    height: 300px;
 }
 
 button {
-    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -25,3 +27,12 @@ button {
     display: inline-block;
     font-size: 16px;
 }
+
+.okBut {
+    background-color: #4CAF50;
+}
+
+.clearBut {
+    background-color:  rgba(139, 13, 13, 0.644);
+}
+    
