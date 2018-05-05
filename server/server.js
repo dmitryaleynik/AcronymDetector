@@ -3,6 +3,8 @@ var http = require('http');
 var express = require('express');
 var fs = require('fs');
 var url = require('url');
+var searcherCreater = require('./acronymService/searcher');
+
 
 var app = express();
 
@@ -16,7 +18,7 @@ var index = require('./routes/index');
 
 
 app.use(express.static('../public'));
-// app.use('/', index);
+app.use('/', index);
 
 app.get('/lol', function (req, res) {
   res.send('<h1>Hello World</h1>');
@@ -24,6 +26,8 @@ app.get('/lol', function (req, res) {
 
 app.post('/', function (req, res) {
   console.log(req.body);
+  var searcher = new searcherCreater(req.body.text);
+  searcher.search();
   res.send('got it');
   res.end();
  })
