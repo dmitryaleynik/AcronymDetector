@@ -7,11 +7,11 @@ function Searcher(rawText) {
     var abbreviationsContext = [];
     var promises = [];
 
-    REGEXES.forEach(function(regular, index, arr) {
+    REGEXES.forEach(function(data, index, arr) {
       promises.push(new Promise ((resolve, reject) => {
-        resolve(rawText.match(regular))
+        resolve(rawText.match(data.regex))
       }));
-      console.log('after' + index);
+      console.log('after' + data.splitter);
     })
     Promise.all(promises).then(results => {
       console.log('done');
