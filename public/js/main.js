@@ -27,4 +27,11 @@
   clearButton.onclick = function () {
    textarea.value = ''; 
   }
+
+  let regular = /(\s*\w+\d*\w*\s*){2} an acronym for [^!^?^\.]+/g;
+  let str = 'BSu is an acronym for for Belarussian State UNiversity is the biggest university in Belarus.';
+  alert(str.match(regular));
+
+  
+
 })();
