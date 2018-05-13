@@ -25,10 +25,8 @@ app.get('/lol', function (req, res) {
  })
 
 app.post('/', function (req, res) {
-  console.log(req.body);
   var searcher = new searcherCreater(req.body.text);
   searcher.search();
-  res.send('got it');
   res.end();
  })
  
