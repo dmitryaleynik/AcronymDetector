@@ -14,7 +14,7 @@
 }
 
 textarea {
-    width: 40%;
+    width: 600px;
     height: 300px;
 }
 
@@ -27,9 +27,16 @@ button {
     display: inline-block;
     font-size: 16px;
 }
+.reader {
+    float: left;
+    margin-right: 200px;
+}
 
 .okBut {
     background-color: #4CAF50;
+}
+#result {
+    display: none;
 }
 
 .clearBut {
